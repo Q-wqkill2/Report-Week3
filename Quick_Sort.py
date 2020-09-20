@@ -16,6 +16,10 @@ def quick_sort(sequence):
             item_lower.append(item)
         else: 
             item_greater.append(item)
+    """
+    This is descending order. For ascending order:
+    Swapping the position into: quick_sort(item_greater) + ... + quick_sort(item_lower)
+    """
     return quick_sort(item_lower) + [pivot] + quick_sort(item_greater)
 sequence = create_array()
 print(sequence)
